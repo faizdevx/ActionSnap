@@ -35,6 +35,7 @@ E --> F[Transformer encoder]
 F --> G[Global average pooling]
 G --> H[Classifier 6 classes]
 
+```
 
 ## video ingestion 
 
