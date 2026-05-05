@@ -47,3 +47,9 @@ G --> H[Classifier 6 classes]
 
 ![patch ingestion](img2.png)
 ![patch ingestion](img4.png)
+
+
+## positional encoding
+
+![positional encoding](img5.png)
+![postional encoding](img6.png)
