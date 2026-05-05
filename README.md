@@ -36,37 +36,15 @@ F --> G[Global average pooling]
 G --> H[Classifier 6 classes]
 
 ```
-
-## video ingestion 
-
-![video ingestion](img1.png)
-
-![video ingestion](img3.png)
-
-## Patch Embedding
-
-![patch ingestion](img2.png)
-![patch ingestion](img4.png)
-
-
-## positional encoding
-
-![positional encoding](img5.png)
-![postional encoding](img6.png)
-
-
-## Transformer Encoder
-
-
-![Transformer Encoder](img7.png)
-![Transformer Encoder](img8.png)
-
-
-## Global Pooling
-
-![Global Pooling](img9.png)
-![Global Pooling](img10.png)
-
-## CLASSIFIER HEAD
-
-![cLASSIFIER HEAD](img11.png)
+Video Ingestion
+<p align="center"> <img src="img1.png" width="300"/> <img src="img3.png" width="300"/> </p>
+Patch Embedding
+<p align="center"> <img src="img2.png" width="300"/> <img src="img4.png" width="300"/> </p>
+Positional Encoding
+<p align="center"> <img src="img5.png" width="300"/> <img src="img6.png" width="300"/> </p>
+Transformer Encoder
+<p align="center"> <img src="img7.png" width="300"/> <img src="img8.png" width="300"/> </p>
+Global Average Pooling
+<p align="center"> <img src="img9.png" width="300"/> <img src="img10.png" width="300"/> </p>
+Classifier Head
+<p align="center"> <img src="img11.png" width="350"/> </p> ```
