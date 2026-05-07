@@ -241,3 +241,7 @@ Stop-Process -Id <PID>
 - The web app uses MediaPipe in the browser, so the first run needs internet access to download the pose landmarker assets.
 - The model was trained only on six action classes. If you sit still, it may still choose one of those six classes because `IDLE` was intentionally removed.
 - For best predictions, keep one person visible, avoid extreme camera angles, and keep arms inside the frame.
+
+
+#Author
+Faizal
