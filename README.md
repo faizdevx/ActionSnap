@@ -56,11 +56,11 @@ It includes both:
 
 Uploaded-video workflow:
 
-<p align="center"> <video src="video.mp4" controls width="850"></video> </p>
+<video controls src="video.mp4" title="Title"></video>
 
 Working webcam workflow:
 
-<p align="center"> <video src="working_webcam.mp4" controls width="850"></video> </p>
+<video controls src="working_webcam.mp4" title="Title"></video>
 
 If your Markdown viewer does not render videos inline, open these files directly:
 

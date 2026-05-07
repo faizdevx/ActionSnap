@@ -35,10 +35,6 @@ pose_detector = DefaultPredictor(cfg)
 model_load_done = time.time()
 print("Detectron model loaded in ", model_load_done - start)
 
-# ── CHANGED: load transformer checkpoint ────────────────────────────────────
-# The checkpoint is saved by transformer_train.ipynb as models/saved_model.ckpt
-# ActionClassificationTransformer.load_from_checkpoint() works identically
-# to the old LSTM because both inherit from pl.LightningModule.
 lstm_classifier = ActionClassificationLSTM.load_from_checkpoint(
     "models/saved_model.ckpt"
 )

@@ -7,10 +7,6 @@ import torch.nn as nn
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, TensorDataset
 
-# ─────────────────────────────────────────────────────────────
-# Constants & Labels
-# ─────────────────────────────────────────────────────────────
-
 LABELS = [
     "JUMPING",
     "JUMPING_JACKS",
@@ -24,9 +20,6 @@ N_STEPS = 32   # frames per clip
 N_FEATURES = 36  # 18 keypoints × 2 (x, y)
 REQUIRED_DATA_FILES = ("X_train.txt", "Y_train.txt", "X_test.txt", "Y_test.txt")
 
-# ─────────────────────────────────────────────────────────────
-# Dataset Loading Helpers
-# ─────────────────────────────────────────────────────────────
 
 def _resolve_data_root(data_root: str) -> Path:
     root = Path(data_root).expanduser()
@@ -65,10 +58,6 @@ def _load_y(path: str | Path) -> np.ndarray:
         rows = [row.replace("  ", " ").strip().split(" ") for row in f]
     return np.array(rows, dtype=np.int32) - 1  # 0-indexed
 
-
-# ─────────────────────────────────────────────────────────────
-# DataModule
-# ─────────────────────────────────────────────────────────────
 
 class PoseDataModule(pl.LightningDataModule):
     def __init__(self, data_root: str, batch_size: int = 512, num_workers: int = 0):
@@ -112,10 +101,6 @@ class PoseDataModule(pl.LightningDataModule):
             num_workers=self.num_workers,
         )
 
-
-# ─────────────────────────────────────────────────────────────
-# Model Components
-# ─────────────────────────────────────────────────────────────
 
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model: int, max_len: int = 512, dropout: float = 0.1):
@@ -220,5 +205,4 @@ class ActionClassificationTransformer(pl.LightningModule):
         idx = logits.argmax(dim=1).item()
         return LABELS[idx]
 
-# Backward-compatibility alias
 ActionClassificationLSTM = ActionClassificationTransformer
